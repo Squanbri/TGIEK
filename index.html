@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма записи</title>
+  <link rel="shortcut icon" href="https://ab.tgiek.ru/assets/images/logo-blue.png" type="image/png">
+  <link href="https://ab.tgiek.ru/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://ab.tgiek.ru/assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class='container'>
+      <ul class="nav">
+        <li class="nav__item">
+          <a class="nav__link" href="https://tgiek.ru/">КОЛЛЕДЖ</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="header__main-middle mb-2">
+      <a href="https://tgiek.ru/">
+        <img src="https://ab.tgiek.ru/assets/images/logo-blue.png">
+      </a>
+    </section>
+    <section class="block-tgiek-form">
+      <h1 class="mb-4">Форма записи</h1>
+
+      <h4 class="mb-4">Контактные данные</h4>
+
+      <form action="" id="form">
+        <label for="FIO">ФИО</label>
+        <input type="text" id="FIO" name="company_name" placeholder="ФИО" class="form-control"><br>
+        <label for="phone">Телефон</label>
+        <input type="text" id="phone" name="fullname" placeholder="+7(___)___-__-__" class="form-control"><br>
+        <label for="email">Email(Проверьте папку спам на электронной почте)</label>
+        <input type="text" id="email" name="email" placeholder="Email" class="form-control"><br>
+        <label for="education">Образование</label>
+        <!-- <input type="text" id="education" name="education" placeholder="Образование" class="form-control"><br> -->
+        <select type="tel" id="education" name="education" class="form-control">     
+            <option>9 классов</option>
+            <option>11 классов</option>
+        </select> <br>
+
+        <label for="selectType">Форма обучения</label>
+        <select type="tel" id="selectType" name="Type_study" class="form-control">     
+            <!-- Сюда js вставляет тип обучения -->
+            <option>Очное обучение</option>
+            <option>Заочное обучение</option>
+        </select> <br>
+
+        <label for="selectDate">Дата записи</label>
+        <select type="text" id="selectDate" name="email" class="form-control">
+            <!-- Сюда js вставляет даты приёма -->
+        </select> <br>
+
+        <label for="selectTime">Время записи</label>
+        <select  type="text" id="selectTime" name="email" class="form-control">
+            <!-- Сюда js вставляет время записи -->
+        </select>
+        <button class="send my-4 px-5 py-2 record" id='record'>ЗАПИСАТЬСЯ</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader"> <div class="lds-ring"><div></div><div></div><div></div><div></div></div> </div>
+  <!-- Preloader end -->
+
+  <!-- Modal -->
+  <div class="modal" id="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Вы зарегестрировали запись</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Письмо отправленно на почту. <br>Если письмо не пришло, проверьте папку спам</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end -->
+
+  <script>
+    const record = document.querySelector('#record')
+    record.addEventListener('click', e => e.preventDefault())
+  </script>
+  <script src="https://ab.tgiek.ru/assets/js/jquery.min.js" type="text/javascript"></script>
+  <script src="https://ab.tgiek.ru//assets/js/jquery.maskedinput.min.js" type="text/javascript"></script>
+  <script src="https://ab.tgiek.ru//assets/js/popper.min.js"></script>
+  <script src="https://ab.tgiek.ru//assets/js/bootstrap.min.js"></script>
+  <script src="https://ab.tgiek.ru//assets/js/script.js"></script>
+</body>
+</html>
